@@ -1,28 +1,39 @@
-import { useState } from 'react'
+import Hero from './components/Hero';
+import About from './components/About';
+import Skills from './components/Skills';
+import Projects from './components/Projects';
+import Contact from './components/Contact';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-lg">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">
-          Vibe Coding Platform
-        </h1>
-        <p className="text-gray-600 mb-6">
-          Your AI-powered development environment
-        </p>
-        <div className="text-center">
-          <button
-            onClick={() => setCount(count + 1)}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
-          >
-            Count is {count}
-          </button>
+    <div className="min-h-screen bg-slate-950 text-slate-100">
+      {/* Top Nav */}
+      <header className="fixed inset-x-0 top-0 z-50 border-b border-slate-800/60 bg-slate-950/70 backdrop-blur">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3 sm:px-8 lg:px-12">
+          <a href="#home" className="font-semibold tracking-tight">
+            Tanmay <span className="text-cyan-400">Singh</span>
+          </a>
+          <nav className="hidden gap-6 text-sm text-slate-300 sm:flex">
+            <a href="#about" className="hover:text-cyan-300">About</a>
+            <a href="#skills" className="hover:text-cyan-300">Skills</a>
+            <a href="#projects" className="hover:text-cyan-300">Projects</a>
+            <a href="#contact" className="hover:text-cyan-300">Contact</a>
+          </nav>
+          <a href="#projects" className="rounded-md bg-cyan-500 px-3 py-1.5 text-sm font-medium text-slate-900 hover:bg-cyan-400">
+            View Work
+          </a>
         </div>
-      </div>
+      </header>
+
+      <main className="[scrollbar-gutter:stable]">
+        <Hero />
+        <About />
+        <Skills />
+        <Projects />
+        <Contact />
+      </main>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

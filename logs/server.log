@@ -1,0 +1,38 @@
+
+> vibe-generated-app@1.0.0 dev
+> vite
+
+
+  VITE v5.4.20  ready in 218 ms
+
+  ➜  Local:   http://localhost:3000/
+  ➜  Network: http://172.20.22.56:3000/
+3:42:26 AM [vite] Pre-transform error: Transform failed with 1 error:
+/home/workspace/src/components/Skills.jsx:4:27: ERROR: Expected ")" but found ":"
+3:42:27 AM [vite] ✨ new dependencies optimized: framer-motion, lucide-react, @splinetool/react-spline
+3:42:27 AM [vite] ✨ optimized dependencies changed. reloading
+3:42:27 AM [vite] Pre-transform error: Transform failed with 1 error:
+/home/workspace/src/components/Skills.jsx:4:27: ERROR: Expected ")" but found ":"
+3:42:30 AM [vite] Internal server error: Transform failed with 1 error:
+/home/workspace/src/components/Skills.jsx:4:27: ERROR: Expected ")" but found ":"
+  Plugin: vite:esbuild
+  File: /home/workspace/src/components/Skills.jsx:4:27
+  
+  Expected ")" but found ":"
+  2  |  import { Sparkles } from 'lucide-react';
+  3  |  
+  4  |  const SkillPill = ({ name }: { name: string }) => (
+     |                             ^
+  5  |    <span className="inline-flex items-center gap-2 rounded-full border border-slate-800 bg-slate-900/50 px-3 py-1 text-sm text-slate-200">
+  6  |      <span className="h-1.5 w-1.5 rounded-full bg-cyan-400" />
+  
+      at failureErrorWithLog (/home/workspace/node_modules/esbuild/lib/main.js:1472:15)
+      at /home/workspace/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/home/workspace/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/home/workspace/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/home/workspace/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:508:28)
+      at addChunk (node:internal/streams/readable:559:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+      at Readable.push (node:internal/streams/readable:390:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
